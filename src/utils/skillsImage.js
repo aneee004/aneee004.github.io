@@ -75,6 +75,8 @@ import wolframalpha from '../assets/svg/skills/wolframalpha.svg'
 
 import canva from '../assets/svg/skills/canva.svg'
 
+import kafka from '../assets/svg/skills/kafka.svg'
+import spark from '../assets/svg/skills/spark.svg'
 
 export const skillsImage = (skill) => {
     const skillID = skill.toLowerCase();
@@ -227,6 +229,10 @@ export const skillsImage = (skill) => {
             return wolframalpha;
         case 'canva':
             return canva;
+        case 'kafka':
+            return kafka;
+        case 'spark':
+            return spark;
         default:
             break;
     }
