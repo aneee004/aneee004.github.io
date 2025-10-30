@@ -14,6 +14,14 @@ export const blogData = [
         date: 'Jul 7, 2020',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Markdown-blue-solid.svg/2560px-Markdown-blue-solid.svg.png',
         url: 'https://discuss.codechef.com/t/tutorial-formatting-in-codechef-discuss/72834'
+    },
+    {
+        id: 3,
+        title: 'Facebook HackerCup Editorial (Unofficial)',
+        description: 'Created an unofficial editorial for Facebook HackerCup 2020 after the contest.',
+        date: 'Jul 26, 2020',
+        image: 'https://www.lorenzovainigli.com/_astro/hackercup_2020.DMAix9BU.png',
+        url: 'https://discuss.codechef.com/t/facebook-hackercup-2020-editorial-unofficial/73294'
     }
 ]
 
