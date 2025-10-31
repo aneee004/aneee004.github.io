@@ -353,74 +353,34 @@ function Contacts() {
                                     <FaInstagram aria-label='Instagram' />
                                 </a>
                             )}
-                            {socialsData.medium && (
+                            {socialsData.leetcode && (
                                 <a
-                                    href={socialsData.medium}
+                                    href={socialsData.leetcode}
                                     target='_blank'
                                     rel='noreferrer'
                                     className={classes.socialIcon}
+                                    aria-label='LeetCode'
                                 >
-                                    <FaMediumM aria-label='Medium' />
+                                    <img
+                                        src={'https://simpleicons.org/icons/leetcode.svg'}
+                                        alt='LeetCode'
+                                        style={{ width: '21px', height: '21px', filter: theme.type === 'light' ? 'invert(1)' : 'none' }}
+                                    />
                                 </a>
                             )}
-                            {socialsData.blogger && (
+                            {socialsData.leetcode && (
                                 <a
-                                    href={socialsData.blogger}
+                                    href={socialsData.codeforces}
                                     target='_blank'
                                     rel='noreferrer'
                                     className={classes.socialIcon}
+                                    aria-label='Codeforces'
                                 >
-                                    <FaBloggerB aria-label='Blogger' />
-                                </a>
-                            )}
-                            {socialsData.youtube && (
-                                <a
-                                    href={socialsData.youtube}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaYoutube aria-label='YouTube' />
-                                </a>
-                            )}
-                            {socialsData.reddit && (
-                                <a
-                                    href={socialsData.reddit}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaRedditAlien aria-label='Reddit' />
-                                </a>
-                            )}
-                            {socialsData.stackOverflow && (
-                                <a
-                                    href={socialsData.stackOverflow}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaStackOverflow aria-label='Stack Overflow' />
-                                </a>
-                            )}
-                            {socialsData.codepen && (
-                                <a
-                                    href={socialsData.codepen}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaCodepen aria-label='CodePen' />
-                                </a>
-                            )}
-                            {socialsData.gitlab && (
-                                <a
-                                    href={socialsData.gitlab}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    className={classes.socialIcon}
-                                >
-                                    <FaGitlab aria-label='GitLab' />
+                                    <img
+                                        src={'https://simpleicons.org/icons/codeforces.svg'}
+                                        alt='LeetCode'
+                                        style={{ width: '21px', height: '21px', filter: theme.type === 'light' ? 'invert(1)' : 'none' }}
+                                    />
                                 </a>
                             )}
                         </div>
