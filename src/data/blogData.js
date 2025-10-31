@@ -4,7 +4,7 @@ export const blogData = [
         title: 'OOPS Concepts in C++',
         description: 'A blog post covering the basics of Object Oriented Programming in C++.',
         date: 'Aug 1, 2020',
-        image: 'https://cdn.dribbble.com/userupload/26152205/file/original-d55fde1b459e1b27afc54921be0c1b9c.png?resize=1600x1200',
+        image: 'https://logopond.com/logos/eb5243f573674cf7437c3d9b0f073909.png',
         url: 'https://discuss.codechef.com/t/c-oops-concepts/74361'
     },
     {
@@ -12,7 +12,7 @@ export const blogData = [
         title: 'Markdown Basics',
         description: 'Markdown is a lightweight markup language with a plain text formatting syntax. This blog post covers the basics of Markdown and how to use it in the discourse forum.',
         date: 'Jul 7, 2020',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Markdown-blue-solid.svg/2560px-Markdown-blue-solid.svg.png',
+        image: 'https://logopond.com/logos/eb5243f573674cf7437c3d9b0f073909.png',
         url: 'https://discuss.codechef.com/t/tutorial-formatting-in-codechef-discuss/72834'
     },
     {
@@ -20,7 +20,7 @@ export const blogData = [
         title: 'Facebook HackerCup Editorial (Unofficial)',
         description: 'Created an unofficial editorial for Facebook HackerCup 2020 after the contest.',
         date: 'Jul 26, 2020',
-        image: 'https://www.lorenzovainigli.com/_astro/hackercup_2020.DMAix9BU.png',
+        image: 'https://logopond.com/logos/eb5243f573674cf7437c3d9b0f073909.png',
         url: 'https://discuss.codechef.com/t/facebook-hackercup-2020-editorial-unofficial/73294'
     }
 ]
