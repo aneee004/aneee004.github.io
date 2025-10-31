@@ -129,7 +129,7 @@ function Contacts() {
 
     const classes = useStyles();
 
-    const handleContactForm = (e) => {
+    const handleContactForm = async (e) => {
         e.preventDefault();
 
         if (name && email && message) {
@@ -140,16 +140,29 @@ function Contacts() {
                     message: message,
                 };
 
-                axios.post(contactsData.sheetAPI, responseData).then((res) => {
+                const formData = new FormData(e.target);
+                formData.append("name", name);
+                formData.append("email", email);
+                formData.append("message", message);
+                formData.append("access_key", "c27ad1ca-17d8-4853-9e3d-e00740a96753");
+
+                const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+                });
+
+                const data = await response.json();
+                setSuccess(data.success);
+
+                if (data.success) {
                     console.log('success');
-                    setSuccess(true);
                     setErrMsg('');
 
                     setName('');
                     setEmail('');
                     setMessage('');
                     setOpen(false);
-                });
+                }
             } else {
                 setErrMsg('Invalid email');
                 setOpen(true);
