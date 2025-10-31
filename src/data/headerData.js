@@ -4,7 +4,7 @@ import profileImg from '../assets/jpg/profile.jpg'
 export const headerData = {
     name: 'Aniruthan Rajendran',
     title: "Software Developer",
-    desciption:"There wasn't a bird in the sky, but that was not what caught her attention. It was the clouds. The deep green that isn't the color of clouds, but came with these. She knew what was coming and she hoped she was prepared. ",
+    desciption:"I’ve always loved the feeling of building something that simply works: from automating systems at Apple to crafting elegant code that scales. For me, software isn’t just logic — it’s rhythm, design, and problem-solving in harmony. Every project I take on is an opportunity to think deeper, build cleaner, and grow sharper.",
     image: profileImg,
     resumePdf: resume
 }

@@ -1,5 +1,5 @@
 export const achievementData = {
-    bio : "Putting quantified achievements on a resume is great, but I just don’t work with hard numbers. I have no data to support the quality of my work. If you have lots of relevant experience, the heading statement of your resume will be a summary.",
+    bio : "From tackling challenging problems to competing on global stages, I’ve consistently pushed my limits. My journey spans Olympiads, ICPC, and competitive programming contests, reflecting both passion and perseverance. Each achievement marks a milestone in my pursuit of algorithmic excellence.",
     achievements : [
         {
             id : 1,
@@ -19,13 +19,20 @@ export const achievementData = {
         },
         {
             id : 3,
+            title : 'ACM-ICPC',
+            details : 'Secured 27th Rank in ACM-ICPC Asia Amritapuri Preliminary Round 2020.',
+            date : 'Aug 21, 2020',
+            field : 'CP',
+            image : 'https://news.icpc.global/icpc_foundation.svg'
+        },
+        {
+            id : 4,
             title : 'Architecting on AWS Certification',
             details : 'Completed training on AWS Architecting using compute, database, and kubernetes.',
             date : 'Sep 29, 2023',
             field : 'Cloud',
             image : 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1280px-Amazon_Web_Services_Logo.svg.png'
         }
-
     ]
 }
 

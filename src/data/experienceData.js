@@ -2,7 +2,7 @@ export const experienceData = [
     {
         id: 1,
         company: 'Apple Inc.',
-        jobtitle: 'Individual Contributor Technical - 3',
+        jobtitle: 'Senior Software Developer',
         startYear: '2021',
         endYear: '2025'
     },
