@@ -7,11 +7,11 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import { certificatesData } from '../../data/certificatesData'
 import { certificatesImage } from '../../utils/certificateImage'
 
-function Skills() {
+function Certificates() {
 
     const { theme } = useContext(ThemeContext);
 
-    const skillBoxStyle = {
+    const certificateBoxStyle = {
         backgroundColor: theme.secondary,
         boxShadow: `0px 0px 30px ${theme.primary30}`
     }
@@ -19,7 +19,7 @@ function Skills() {
     return (
         <div className="certificates" style={{backgroundColor: theme.secondary}}>
             <div className="certificatesHeader">
-                <h2 style={{color: theme.primary}}>Skills</h2>
+                <h2 style={{color: theme.primary}}>Certificates</h2>
             </div>
             <div className="certificatesContainer">
                 <div className="certificates--scroll">
@@ -32,13 +32,20 @@ function Skills() {
                         play={true} 
                         direction="left"
                     >
-                        {certificatesData.map((certificate, id) => (
-                            <div className="certificate--box" key={id} style={certificateBoxStyle}>
-                                <img src={certificatesImage(certificate)} alt={certificate} />
+                        {certificatesData.map((cert) => (
+                            <a
+                                className="certificate--box"
+                                key={cert.id}
+                                href={cert.link}
+                                target="_blank"
+                                rel="noreferrer"
+                                style={certificateBoxStyle}
+                            >
+                                <img src={certificatesImage(cert.name)} alt={cert.name} />
                                 <h3 style={{color: theme.tertiary}}>
-                                    {certificate}
+                                    {cert.title}
                                 </h3>
-                            </div>
+                            </a>
                         ))}
                     </Marquee>
                 </div>
@@ -47,4 +54,4 @@ function Skills() {
     )
 }
 
-export default Skills
+export default Certificates
