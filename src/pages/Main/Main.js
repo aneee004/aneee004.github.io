@@ -17,10 +17,10 @@ function Main() {
             <About />
             <Education />
             <Experience />
-            <Skills />
             <Projects />
-            <Achievement />
+            <Skills />
             <Certificates />
+            <Achievement />
             <Blog />
             <Contacts />
             <Footer />

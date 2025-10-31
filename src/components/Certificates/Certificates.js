@@ -22,7 +22,7 @@ function Certificates() {
                 <h2 style={{color: theme.primary}}>Certificates</h2>
             </div>
             <div className="certificatesContainer">
-                <div className="certificates--scroll">
+                <div className="certificate--scroll">
                     <Marquee 
                         gradient={false} 
                         speed={80} 
@@ -30,7 +30,8 @@ function Certificates() {
                         pauseOnClick={true} 
                         delay={0}
                         play={true} 
-                        direction="left"
+                        autoFill={true}
+                        direction="right"
                     >
                         {certificatesData.map((cert) => (
                             <a

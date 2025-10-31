@@ -24,14 +24,6 @@ export const achievementData = {
             date : 'Aug 21, 2020',
             field : 'CP',
             image : 'https://news.icpc.global/icpc_foundation.svg'
-        },
-        {
-            id : 4,
-            title : 'Architecting on AWS Certification',
-            details : 'Completed training on AWS Architecting using compute, database, and kubernetes.',
-            date : 'Sep 29, 2023',
-            field : 'Cloud',
-            image : 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1280px-Amazon_Web_Services_Logo.svg.png'
         }
     ]
 }

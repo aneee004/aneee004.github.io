@@ -2,19 +2,19 @@ export const certificatesData = [
     {
         id: 1,
         name: 'React',
-        title: 'Front-End Web Development with React',
+        title: 'Web Dev (Specialization)',
         link: 'https://www.coursera.org/account/accomplishments/certificate/NUBNW9J5N296'
     },
     {
         id: 2,
         name: 'React',
-        title: 'Front-End Web UI Frameworks and Tools: Bootstrap 4',
+        title: 'Web Dev (Bootstrap 4)',
         link: 'https://www.coursera.org/account/accomplishments/verify/ALB9Y8327EJ7'
     },
     {
         id: 3,
         name: 'React',
-        title: 'Introduction to Front-end Development with ReactJS',
+        title: 'Wed Dev (ReactJS)',
         link: 'https://www.coursera.org/account/accomplishments/certificate/KZ5UND4WB2HW'
     },
     {
@@ -74,7 +74,7 @@ export const certificatesData = [
     {
         id: 13,
         name: 'Deep Learning',
-        title: 'Neural Networks and Deep Learning',
+        title: 'Neural Networks & Deep Learnings',
         link: 'https://www.coursera.org/account/accomplishments/certificate/STYH3WMNRHJD'
     },
     {
