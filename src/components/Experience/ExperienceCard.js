@@ -16,9 +16,6 @@ function ExperienceCard({id, company, jobtitle, startYear, endYear}) {
     const useStyles = makeStyles((t) => ({
         experienceCard : {
             backgroundColor:theme.primary30,
-            "&:hover": {
-                backgroundColor:theme.primary50,
-            },
         },
     }));
 
