@@ -20,13 +20,13 @@ export const certificatesData = [
     {
         id: 4,
         name: 'AWS',
-        title: 'AWS Fundamentals (Specialization)',
+        title: 'AWS (Specialization)',
         link: 'https://www.coursera.org/account/accomplishments/specialization/certificate/ZZS9JBFP7JV6'
     },
     {
         id: 5,
         name: 'AWS',
-        title: 'Building Serverless Applications',
+        title: 'Building Serverless Apps',
         link: 'https://www.coursera.org/account/accomplishments/certificate/TZA26JG6RV27'
     },
     {
@@ -74,7 +74,7 @@ export const certificatesData = [
     {
         id: 13,
         name: 'Deep Learning',
-        title: 'Neural Networks & Deep Learnings',
+        title: 'Neural Networks Deep Learning',
         link: 'https://www.coursera.org/account/accomplishments/certificate/STYH3WMNRHJD'
     },
     {

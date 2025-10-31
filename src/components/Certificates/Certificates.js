@@ -1,4 +1,4 @@
-import React,{ useContext } from 'react';
+import React,{ useContext, useState } from 'react';
 import Marquee from "react-fast-marquee";
 
 import './Certificates.css'
@@ -10,6 +10,7 @@ import { certificatesImage } from '../../utils/certificateImage'
 function Certificates() {
 
     const { theme } = useContext(ThemeContext);
+    const [isPaused, setIsPaused] = useState(false);
 
     const certificateBoxStyle = {
         backgroundColor: theme.secondary,
@@ -22,14 +23,18 @@ function Certificates() {
                 <h2 style={{color: theme.primary}}>Certificates</h2>
             </div>
             <div className="certificatesContainer">
-                <div className="certificate--scroll">
+                <div 
+                    className="certificate--scroll"
+                    onMouseEnter={() => setIsPaused(true)}
+                    onMouseLeave={() => setIsPaused(false)}
+                >
                     <Marquee 
                         gradient={false} 
                         speed={80} 
                         pauseOnHover={true}
                         pauseOnClick={true} 
                         delay={0}
-                        play={true} 
+                        play={!isPaused} 
                         autoFill={true}
                         direction="right"
                     >

@@ -33,6 +33,29 @@
 .certificate--scroll {
     width: 100%;
     margin: 0 2rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.certificate--scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.certificate--scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.certificate--scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.certificate--scroll::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 
