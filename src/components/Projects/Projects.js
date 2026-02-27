@@ -27,15 +27,15 @@ function Projects() {
                 color: theme.secondary, 
                 backgroundColor: theme.primary,
                 transform: 'scale(1.05)',
-                width: '180px',
+                width: '160px',
                 gap: '12px',
             },
             "&:hover $viewArr": {
                 opacity: 1,
                 transform: 'rotate(360deg) scale(1)',
                 backgroundColor: theme.secondary,
-                width: '38px',
-                height: '38px',
+                width: '30px',
+                height: '30px',
                 padding: '0.5rem',
                 marginLeft: '0px',
             }
