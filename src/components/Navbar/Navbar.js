@@ -32,12 +32,12 @@ function Navbar() {
     const useStyles = makeStyles((t) => ({
         navMenu: {
             fontSize: '2.5rem',
-            color: theme.tertiary,
+            color: '#fff',
             cursor: 'pointer',
             transform: 'translateY(-10px)',
             transition: 'color 0.3s',
             '&:hover': {
-                color: theme.primary,
+                color: '#fff',
             },
             [t.breakpoints.down('sm')]: {
                 fontSize: '2.5rem',
@@ -133,15 +133,15 @@ function Navbar() {
     return (
         <div className='navbar'>
             <div className='navbar--container'>
-                <h1 style={{ color: theme.secondary }}>
-                    {shortname(headerData.name)}
-                </h1>
-
                 <IoMenuSharp
                     className={classes.navMenu}
                     onClick={handleDrawerOpen}
                     aria-label='Menu'
                 />
+
+                <h1 style={{ color: '#000' }}>
+                    {shortname(headerData.name)}
+                </h1>
             </div>
             <Drawer
                 variant='temporary'
