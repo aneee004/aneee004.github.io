@@ -267,6 +267,24 @@ function Navbar() {
 
                         <Fade left>
                             <NavLink
+                                to='/#projects'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <BsFillGearFill
+                                        className={classes.drawerIcon}
+                                    />
+                                    <span className={classes.drawerLinks}>
+                                        Projects
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade>
+
+                        <Fade left>
+                            <NavLink
                                 to='/#contacts'
                                 smooth={true}
                                 spy='true'
