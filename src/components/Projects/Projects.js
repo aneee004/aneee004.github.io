@@ -18,26 +18,34 @@ function Projects() {
         viewAllBtn : {
             color: theme.secondary, 
             backgroundColor: theme.primary,
-            transition: 'color 0.2s',
+            width: '150px',
+            transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+            transform: 'scale(1)',
             "&:hover": {
-                color: theme.secondary70, 
+                color: theme.secondary, 
                 backgroundColor: theme.primary,
+                transform: 'scale(1.05)',
+                width: '200px',
+            },
+            "&:hover $viewArr": {
+                opacity: 1,
+                transform: 'rotate(360deg) scale(1)',
+                backgroundColor: theme.secondary,
             }
         },
         viewArr : {
             color: theme.tertiary, 
             backgroundColor: theme.secondary,
-            width: '40px',
-            height: '40px',
+            width: '38px',
+            height: '38px',
             padding: '0.5rem',
             fontSize: '1.05rem',
             borderRadius: '50%',
             cursor: 'pointer',
-            transition: 'background-color 0.2s',
-            "&:hover": {
-                color: theme.tertiary, 
-                backgroundColor: theme.secondary70,
-            }
+            opacity: 0,
+            transform: 'rotate(0deg) scale(0)',
+            transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+            pointerEvents: 'none',
         },
     }));
 
