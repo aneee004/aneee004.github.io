@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: flex-start;
     min-height: 60vh;
-    padding: 2rem;
+    padding: 2.5rem 2rem 2rem 2rem;
     overflow-x: hidden;
 }
 
@@ -68,11 +68,17 @@
 
 
 @media (min-width: 992px) and (max-width: 1380px) {
-
+    .blog {
+        padding: 2rem 1rem 1rem 1rem;
+    }
 }
 
 
 @media screen and (max-width: 992px) {
+    .blog {
+        padding: 1rem;
+    }
+
     .blog--bodyContainer {
         display: flex;
         flex-direction: column;
@@ -83,6 +89,10 @@
 }
 
 @media screen and (max-width: 800px) {
+    .blog {
+        padding: 0.5rem;
+    }
+
     .blog--header h1 {
         font-size: 3rem;
         margin-bottom: 30px;

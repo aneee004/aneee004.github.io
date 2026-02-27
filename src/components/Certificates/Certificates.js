@@ -1,5 +1,4 @@
-import React,{ useContext, useState } from 'react';
-import Marquee from "react-fast-marquee";
+import React,{ useContext } from 'react';
 
 import './Certificates.css'
 
@@ -10,7 +9,22 @@ import { certificatesImage } from '../../utils/certificateImage'
 function Certificates() {
 
     const { theme } = useContext(ThemeContext);
-    const [isPaused, setIsPaused] = useState(false);
+    const groupedCertificates = certificatesData.reduce((acc, cert) => {
+        if (!acc[cert.name]) {
+            acc[cert.name] = [];
+        }
+        acc[cert.name].push(cert);
+        return acc;
+    }, {});
+    const webDevAndHackerRank = [
+        ...(groupedCertificates.React || []),
+        ...(groupedCertificates.HackerRank || [])
+    ];
+    const certificateRows = [
+        webDevAndHackerRank,
+        groupedCertificates['Deep Learning'] || [],
+        groupedCertificates.AWS || []
+    ].filter((row) => row.length > 0);
 
     const certificateBoxStyle = {
         backgroundColor: theme.secondary,
@@ -23,25 +37,15 @@ function Certificates() {
                 <h2 style={{color: theme.primary}}>Certificates</h2>
             </div>
             <div className="certificatesContainer">
-                <div 
-                    className="certificate--scroll"
-                    onMouseEnter={() => setIsPaused(true)}
-                    onMouseLeave={() => setIsPaused(false)}
-                >
-                    <Marquee 
-                        gradient={false} 
-                        speed={80} 
-                        pauseOnHover={true}
-                        pauseOnClick={true} 
-                        delay={0}
-                        play={!isPaused} 
-                        autoFill={true}
-                        direction="right"
+                {certificateRows.map((row, rowIndex) => (
+                    <div
+                        className={`certificate-row ${rowIndex === certificateRows.length - 1 ? 'certificate-row--aws' : ''}`}
+                        key={`certificate-row-${rowIndex}`}
                     >
-                        {certificatesData.map((cert) => (
+                        {row.map((cert) => (
                             <a
                                 className="certificate--box"
-                                key={cert.id}
+                                key={`${cert.id}-${cert.title}`}
                                 href={cert.link}
                                 target="_blank"
                                 rel="noreferrer"
@@ -53,8 +57,8 @@ function Certificates() {
                                 </h3>
                             </a>
                         ))}
-                    </Marquee>
-                </div>
+                    </div>
+                ))}
             </div>
         </div>
     )

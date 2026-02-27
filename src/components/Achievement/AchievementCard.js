@@ -4,42 +4,40 @@ import Fade from 'react-reveal/Fade';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
 
-import { AiOutlineFolder } from "react-icons/ai";
-
 import './Achievement.css'
 
-function AchievementCard({id, title, details, date, field, image}) {
+function AchievementCard({id, title, details, date, image}) {
 
     const { theme } = useContext(ThemeContext);
 
     const useStyles = makeStyles((t) => ({
         achievementCard : {
-            backgroundColor:theme.primary30,
+            backgroundColor: theme.secondary,
+            boxShadow: `0px 0px 30px ${theme.primary30}`,
             "&:hover": {
-                backgroundColor:theme.primary50,
+                backgroundColor: theme.secondary,
             },
         },
     }));
 
     const classes = useStyles();
+    const isLargerImageCard = id === 1 || id === 3;
+    const isThirdCard = id === 3;
+
     return (
         <Fade bottom>
            <div key={id} className={`achievement-card ${classes.achievementCard}`}>
-               <div className="achievecard-content">
-                    <div className="achievecard-details1">
-                        <h2 style={{color: theme.tertiary}}>{title}</h2>
-                        <p style={{color: theme.tertiary80}}>{details}</p>
-                    </div>
-                    <div className="achievecard-details2" style={{color: theme.primary}}>
-                        <h5>{date}</h5>
-                        <div className="achievecard-field">
-                            <AiOutlineFolder />
-                            <h5>{field}</h5>
-                        </div>   
-                    </div>
-                </div> 
                 <div className="achievecard-imgcontainer">
-                    <img src={image} alt="" />
+                    <img
+                        src={image}
+                        alt={title}
+                        className={`${isLargerImageCard ? 'achievecard-img--large' : ''} ${isThirdCard ? 'achievecard-img--xlarge' : ''}`.trim()}
+                    />
+                </div>
+                <div className="achievecard-content">
+                    <p className="achievecard-date" style={{color: theme.tertiary}}>{date}</p>
+                    <h2 style={{color: theme.tertiary}}>{title}</h2>
+                    <p style={{color: theme.tertiary}}>{details}</p>
                 </div>
            </div>
         </Fade>

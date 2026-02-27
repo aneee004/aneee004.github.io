@@ -1,7 +1,6 @@
- export const skillsData = [
+export const skillsData = [
     'C++',
     'Swift',
-    'MATLAB',
     'Python',
     'Docker',
     'Kafka',

@@ -1,5 +1,4 @@
-import React,{ useContext, useState } from 'react';
-import Marquee from "react-fast-marquee";
+import React,{ useContext } from 'react';
 
 import './Skills.css'
 
@@ -10,7 +9,6 @@ import { skillsImage } from '../../utils/skillsImage'
 function Skills() {
 
     const { theme } = useContext(ThemeContext);
-    const [isPaused, setIsPaused] = useState(false);
 
     const skillBoxStyle = {
         backgroundColor: theme.secondary,
@@ -23,30 +21,14 @@ function Skills() {
                 <h2 style={{color: theme.primary}}>Skills</h2>
             </div>
             <div className="skillsContainer">
-                <div 
-                    className="skill--scroll"
-                    onMouseEnter={() => setIsPaused(true)}
-                    onMouseLeave={() => setIsPaused(false)}
-                >
-                    <Marquee 
-                        gradient={false} 
-                        speed={80} 
-                        pauseOnHover={true}
-                        pauseOnClick={true} 
-                        delay={0}
-                        play={!isPaused} 
-                        direction="left"
-                    >
-                        {skillsData.map((skill, id) => (
-                            <div className="skill--box" key={id} style={skillBoxStyle}>
-                                <img src={skillsImage(skill)} alt={skill} />
-                                <h3 style={{color: theme.tertiary}}>
-                                    {skill}
-                                </h3>
-                            </div>
-                        ))}
-                    </Marquee>
-                </div>
+                {skillsData.map((skill, id) => (
+                    <div className="skill--box" key={id} style={skillBoxStyle}>
+                        <img src={skillsImage(skill)} alt={skill} />
+                        <h3 style={{color: theme.tertiary}}>
+                            {skill}
+                        </h3>
+                    </div>
+                ))}
             </div>
         </div>
     )

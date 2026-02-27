@@ -19,8 +19,8 @@ function Main() {
             <Experience />
             <Projects />
             <Skills />
-            <Certificates />
             <Achievement />
+            <Certificates />
             <Blog />
             <Contacts />
             <Footer />
